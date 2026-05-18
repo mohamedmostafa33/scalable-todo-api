@@ -38,6 +38,7 @@ spec:
   - metadata:
       name: mongo-persistent-storage
     spec:
+      storageClassName: gp2
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
