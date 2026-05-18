@@ -130,13 +130,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # MongoDB connection settings
-MONGO_DB_NAME = os.getenv('MONGO_DB_NAME')
-MONGO_DB_HOST = os.getenv('MONGO_DB_HOST')
-MONGO_DB_PORT = int(os.getenv('MONGO_DB_PORT'))
+MONGO_URI = os.getenv("MONGO_URI")
 
 # Connect to MongoDB
-connect(
-    db=MONGO_DB_NAME,
-    host=MONGO_DB_HOST,
-    port=MONGO_DB_PORT
-)
+connect(host=MONGO_URI)
