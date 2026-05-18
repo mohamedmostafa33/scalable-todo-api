@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: todo-api-config
+  namespace: todo-app
+data:
+  MONGO_URI: mongodb://todo-statefulset-0.todo-db-service:27017,todo-statefulset-1.todo-db-service:27017,todo-statefulset-2.todo-db-service:27017/todo_db?replicaSet=rs0
+  DEBUG: "True"
+  ALLOWED_HOSTS: "*"
